@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Cards from "./Cards"
+import MainRight from './MainRight';
 import {nanoid} from 'nanoid'
 import { AiOutlineBarChart , AiFillBoxPlot, AiOutlineLineChart, AiFillPieChart, AiOutlineAreaChart } from "react-icons/ai";
 import { BiScatterChart } from "react-icons/bi";
@@ -64,6 +65,8 @@ function MainContainer() {
     ])
   return (
     <div className='mainContainer'>
+
+        
         <div className='banner' style={{ 
             background:`url(${Banner})` ,
             backgroundRepeat:"no-repeat",
@@ -71,18 +74,29 @@ function MainContainer() {
             backgroundSize: "cover"
             }}>
             <div className='textContainer'>
-                <h1>Data</h1>
-                <h1>Visualization</h1>
+                <h1>Welcome To</h1>
+                <h1>SEXTANT</h1>
             </div>
         </div>
-        <div className='cards'>
-            <main>
-                {
-                   cardImg.map((Cimg)=><Cards key={Cimg.id} imageSrc={Cimg.img} title={Cimg.title} CIcon = {Cimg.icon}/>) 
-                }
-                
-            </main>
+
+        <div className='container'>
+            <div className='left'>
+                <div className='cards'>
+                    <main>
+                        {
+                        cardImg.map((Cimg)=><Cards key={Cimg.id} imageSrc={Cimg.img} title={Cimg.title} CIcon = {Cimg.icon}/>) 
+                        }
+                        
+                    </main>
+                </div>
+            </div>
+
+            <div className='right'>
+                <MainRight/>
+            </div>
         </div>
+        
+
     </div>
     // <div className='card-list'>
     //     <Cards/>
