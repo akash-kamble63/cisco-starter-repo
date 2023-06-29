@@ -1,0 +1,16 @@
+.crad .banner{
+    height: 150px;
+    width: 250px;
+    margin-left: 24px;
+    margin-right: 28.5px;
+    border-radius: 0.5em;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.crad .card-body{
+    display: flex;
+    padding: 5px, 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;}
